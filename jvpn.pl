@@ -512,7 +512,7 @@ if ($mode eq "ncui"){
 		$ENV{'INTERFACE'}=$vpnint;
 		system($script);
 	}
-	write_pid($pid);
+
 	for (;;) {
 	    $exists = kill SIGCHLD, $pid;
 	    $debug && printf("\nChecking child: exists=$exists, $pid\n");
